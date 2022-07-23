@@ -1,0 +1,65 @@
+{% extends 'perfil.html' %}
+
+{% block form_editar_perfil %}
+<hr>
+<div class="container">
+    <form method="POST" action=""  class="p-1" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        <legend>Editar Perfil</legend>
+        <fieldset>
+            <div class="mb-3 form-group">
+                {{ form.username.label(class="form-control-label") }}
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for erro in form.username.errors %}
+                        {{ erro }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                    {{ form.username(class="shadow form-control") }}
+                {% endif %}
+            </div>
+            <div class="mb-3 form-group">
+                {{ form.email.label(class="form-control-label") }}
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for erro in form.email.errors %}
+                        {{ erro }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                    {{ form.email(class="shadow form-control") }}
+                {% endif %}
+            </div>
+            <hr class="text-white">
+            <div class="mb-3 form-group">
+                {{ form.foto_perfil.label }}
+                {{ form.foto_perfil(class=" editar-foto shadow form-control-file") }}
+                    {% if form.foto_perfil.errors %}
+                        {% for erro in form.email.errors %}
+                        <span class="text-danger">{{ erro }}</span><br>
+                    {% endfor %}
+                    {% endif %}
+            </div>
+            <hr class="text-white">
+            <div class="form-group">
+                <legend>Cursos:</legend>
+                {% for campo in form %}
+                    {% if 'curso_' in campo.name %}
+                        {{campo(class="form-check-imput") }}
+                        {{campo.label(class="form-check-label") }}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </fieldset>
+        <div class="botao_editar_perfil d-grid gap-2 d-md-flex justify-content-center">
+            {{ form.botao_submit_editar_perfil(class="btn shadow-lg shadow-intensity-lg shadow-primary btn-primary me-md-2") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

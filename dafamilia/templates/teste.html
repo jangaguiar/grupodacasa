@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Perfil</title>
+{% endblock %}
+{% block body %}
+<h1 class="text-center fs-3 mx-auto my-5">Perfil</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="card  border border-2 border-info my-5 mx-auto shadow" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-6 text-center">
+                <img id="foto_usuarios"src="{{ foto_perfil }}" class="rounded my-3" alt="Foto do Usuário">
+                <a href="{{ url_for('editar_perfil') }}"><button class="btn btn-sm btn-outline-info w-50">Editar Perfil</button></a>
+                </div>
+                <!-- <div class="col-1"></div> -->
+                <div class="col-6 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title mb-0">{{current_user.username}}</h2>
+                        <address class="my-0">{{current_user.email}}</address>
+                        <div class="row rounded my-2  p-3 mx-1 bg-info text-black bg-opacity-25 ">
+                            <div class="col-6 text-start ps-0 ">
+                                <span class="text-muted ">Cursos</span><br>
+                                {% if 'Não Informado' in current_user.cursos or current_user.cursos == '' %}
+                                <span class="text-center">0</span>
+                                {% else %}
+                                <span class="text-black ms-3 fw-bold">{{ current_user.cursos.count(';') + 1 }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="col-6 text-end">
+                                <span class="text-muted">Posts</span><br>
+                                <span class="text-black me-2 fw-bold">{{ current_user.contar_posts() }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <span class="mx-auto mb-2" style="font-size:1rem;"><b>Cursos:</b></span>
+            <div class="d-flex flex-row flex-wrap">
+                {% for curso in current_user.cursos.split(';') %}
+                    <!-- <div class="col"> -->
+                        <span class="badge text-bg-success mb-2 mx-auto" style="font-size:0.8rem;">{{ curso }}</span>
+                {% endfor %}
+                        <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

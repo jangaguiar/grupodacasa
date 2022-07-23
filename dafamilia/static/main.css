@@ -1,0 +1,129 @@
+
+/* GERAL PARA TODO O SITE */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.bg-primary-color{
+    background-color: #fff;
+}
+
+.bg-secondary-color{
+    background-color: #eceBea;
+}
+
+.bg-dark-color{
+    background-color: #050505;
+}
+
+.primary-color {
+    color: #050505;
+}
+
+.secondary-color {
+    color: #7a7a7a;
+}
+
+.page-h1{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 2rem;
+    color: #2f2f2f;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position:relative;
+}
+
+.page-h1::after {
+  width: 6rem;
+  border-bottom: 2px solid #2f2f2f;
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+}
+
+/* NAVBAR */
+
+#navbar{
+    /* border-bottom: 1px solid #7a7a7a; */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+#navbar a:hover {
+    color: #7a7a7a;
+}
+
+navbar a.active {
+    border-bottom: 1px solid #050505;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand img{
+    width: 40px;
+}
+
+.navbar-brand span{
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+#navbar-items .navbar-nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#navbar-items .nav-item{
+    margin: 0 1em;
+} */
+
+/* PERFIL */
+
+/* #user-profile{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0;
+} */
+
+.cursos{
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cursos span{
+    margin: 0 0.2rem;
+}
+
+/* EDITAR PERFIL*/
+
+.editar-foto{
+    width: 100%;
+}
+
+/* USUÁRIOS */
+
+ /* #usuarios{
+    display:flex;
+    flex-direction: row;
+} */
+
+/* POST */
+
+.post-name{
+    text-decoration: none;
+}

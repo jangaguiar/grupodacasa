@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Usuários</title>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-h1">Usuários</h1>
+        <div class="row" id="usuarios">
+            {% for usuario in lista_usuarios %}
+                <div class="col-12 col-md-3 mb-3">
+                    <div class="card border border-info shadow mt-5" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(usuario.foto_perfil)) }}" class="card-img-top" alt="Foto do Usuário {{usuario.username}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{usuario.username}}</h5>
+                            <address class="text-start">{{usuario.email}}</address>
+                        </div>
+                        <div class="card-stats bg-info p-3 rounded">
+                        <div class="row g-0">
+                            <div class="col-6 text-start">
+                                <span class="text-muted ">Cursos:</span>
+                                {% if 'Não Informado' in usuario.cursos or current_user.cursos == '' %}
+                                    <span class="text-black ms-1">0</span>
+                                {% else %}
+                                    <span class="text-black ms-1">{{ usuario.cursos.count(';') + 1 }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="col-6 text-end">
+                                <span class="text-muted ">Posts:</span>
+                                <span class="text-black ms-1 ">{{ usuario.contar_posts() }}</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card-body card-courses text-center">
+                        <span class="text-muted">Cursos:</span>
+                        <div class="cursos">
+                            {% for curso in usuario.cursos.split(';') %}
+                            <span class="bg-info mt-2 px-2 text-gray text-light-dark rounded">{{ curso }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
