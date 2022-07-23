@@ -135,6 +135,7 @@ body{
 }
 .post-titulo h3{
     font-size: 1.8rem;
+    max-width: 80%;
 }
 .post-titulo button{
     font-size: 0.8rem;
