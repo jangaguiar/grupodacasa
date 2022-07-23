@@ -49,7 +49,7 @@ body{
 /* NAVBAR */
 
 #navbar{
-    border-bottom: 1px solid #7a7a7a; 
+    border-bottom: 1px solid #7a7a7a;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
     font-weight: 500;
     font-size: 1rem;
@@ -145,6 +145,7 @@ body{
 }
 .post-corpo{
      font-size: 1.2rem;
+     max-width: 80%;
 }
 .post-data-criacao{
     font-family: monospace;
@@ -155,6 +156,16 @@ body{
     bottom: 0.5rem;
     right: 1rem;
 }
+
+
+/* Usuários */
+
+
+
+
+
+
+
 
 /* PERFIL */
 
