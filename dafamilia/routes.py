@@ -16,15 +16,6 @@ def home():
     posts = Post.query.order_by(Post.id.desc())
     return render_template('home.html', posts=posts)
 
-# @app.route('/teste')
-# def teste():
-#     """."""
-#     foto_perfil = url_for(
-#         'static', filename=f'fotos_perfil/{current_user.foto_perfil}')
-#     return render_template('teste.html', foto_perfil=foto_perfil)
-
-
-
 @app.route('/contato')
 def contato():
     """."""
@@ -142,7 +133,7 @@ def salvar_imagem(imagem):
         imagem.filename)  #pylint: disable=unused-variable
     nome_arquivo = nome + codigo + extensao
     caminho_completo = os.path.join(app.root_path, 'static/fotos_perfil', nome_arquivo)
-    tamanho = (155, 155)
+    tamanho = (400, 400)
     imagem_reduzida = Image.open(imagem)
     imagem_reduzida.thumbnail(tamanho)
     imagem_reduzida.save(caminho_completo)
