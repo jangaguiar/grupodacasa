@@ -13,24 +13,24 @@
                     <h3 class="autor-name">{{ post.autor.username }}</h3>
                     <address class="autor-email">{{post.autor.email}}</address>
                     <div class="cursos">
-                            {% for curso in post.autor.cursos.split(';') %}
-                                <span class="curso rounded">{{ curso }}</span>
-                            {% endfor %}
+                        {% for curso in post.autor.cursos.split(';') %}
+                            <span class="curso rounded">{{ curso }}</span>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="col-8 post-info mt-1">
                     <div class="post-titulo d-flex justify-content-between">
-                        <h3 class="" >{{ post.titulo }}</h3>
-                        <a  href="{{ url_for('exibir_post', post_id=post.id) }}"><button type="button" class="btn btn-outline-info">Editar</button></a>
+                        <h3>{{ post.titulo }}</h3>
+                        {% if post.autor.username == current_user.username %}
+                            <a  href="{{ url_for('exibir_post', post_id=post.id) }}"><button type="button" class="btn btn-outline-info">Editar</button></a>
+                        {% endif %}
                     </div>
-
                     <div class="post-corpo">
                         <p class="d-flex justify-content-start p-1 secondary-color">{{ post.corpo }}</p>
                     </div>
                     <div class="post-data-criacao mt-5 mb-0 p-0">
                         <span class="">criado em: {{ post.data_criacao.strftime('%d/%m/%Y') }}</span>
                     </div>
-
                 </div>
             </div>
         {% endfor %}
