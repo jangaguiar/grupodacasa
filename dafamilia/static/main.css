@@ -198,3 +198,28 @@ body{
 
 
 /* CONTATOS */
+/* CONTATOS*/
+/* .bg-image{
+    background-image: url ('../static/fotos_perfil/louco.png');
+    /* min-height: 100vh;
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+ .intro {
+    background-image: url("../static/fotos_perfil/louco2.png");
+    height: 100vh;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    opacity: 0.95;
+    margin-top: -145px;
+
+}
+@media (max-width: 760px) {
+        .intro {
+          opacity: 0.3;
+          z-index: 0;
+        }
+      }
