@@ -14,7 +14,7 @@
               <address class="text-start">{{current_user.email}}</address>
           </div>
           <div class="col-6 text-end">
-              <a href="{{ url_for('editar_perfil')+ '#scrollspyeditar_perfil' }}" ><button type="button"class="btn btn-outline-info card-link" >Editar</button></a>
+              <a  href="{{ url_for('editar_perfil')+ '#scrollspyeditar_perfil' }}" ><button type="button"class="btn btn-outline-info card-link" >Editar</button></a>
           </div>
       </div>
     </div>
@@ -41,8 +41,8 @@
           <span class="bg-info mt-3 px-2 mx-1 text-gray text-light-dark rounded">{{ curso }}</span>
         {% endfor %}
       </div>
-  </div>
   <br id="scrollspyeditar_perfil">
+  </div>
 {% block form_editar_perfil %}
 {% endblock %}
 {% endblock %}
