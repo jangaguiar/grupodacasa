@@ -7,7 +7,7 @@
 <h1 class="page-h1">Perfil</h1>
 <div class="container">
   <div class="card border border-info shadow mt-5 mx-auto" style="width: 18rem;">
-    <img id="foto_usuarios"src="{{ foto_perfil }}" class="card-img-top" alt="Foto do Usuário">
+    <img src="{{ foto_perfil }}" class="card-img-top" alt="Foto do Usuário">
     <div class="card-body">
       <div class="row b-0">
           <div class="col-6">
@@ -19,7 +19,7 @@
           </div>
       </div>
     </div>
-    <div class="card-stats bg-info p-3 rounded">
+    <div class="card-stats bg-info p-3">
       <div class="row g-0">
         <div class="col-6 text-start">
             <span class="text-muted ">Cursos:</span>
@@ -35,11 +35,11 @@
         </div>
       </div>
     </div>
-    <div class="card-body card-courses text-center">
+    <div class="card-body card-courses text-center mt-2">
       <span class="text-muted">Cursos:</span>
       <div class="cursos">
         {% for curso in current_user.cursos.split(';') %}
-          <span class="bg-info mt-2 px-2 text-gray text-light-dark rounded">{{ curso }}</span>
+          <span class="bg-info mt-3 px-2 mx-1 text-gray text-light-dark rounded">{{ curso }}</span>
         {% endfor %}
       </div>
   </div>
