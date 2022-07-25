@@ -14,7 +14,7 @@
               <address class="text-start">{{current_user.email}}</address>
           </div>
           <div class="col-6 text-end">
-              <a href="{{ url_for('editar_perfil')+ '#editar_perfil' }}" ><button type="button"class="btn btn-outline-info card-link" >Editar</button></a>
+              <a href="{{ url_for('editar_perfil')+ '#scrollspyeditar_perfil' }}" ><button type="button"class="btn btn-outline-info card-link" >Editar</button></a>
           </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
         {% endfor %}
       </div>
   </div>
-  <br id="editar_perfil">
+  <br id="scrollspyeditar_perfil">
 {% block form_editar_perfil %}
 {% endblock %}
 {% endblock %}
