@@ -5,10 +5,10 @@
 {% block body %}
     <div class="container">
         <h1 class="page-h1">Usuários</h1>
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             {% for usuario in lista_usuarios %}
                 <div class="col-12 col-md-6 col-lg-4">
-                     <div class="card border border-info shadow mt-5 mx-auto" style="width: 18rem;">
+                    <div class="card border border-info shadow mt-5" style="width: 18rem;">
                         <img src="{{ url_for('static', filename='fotos_perfil/{}'.format(usuario.foto_perfil)) }}" class="card-img-top" alt="Foto do Usuário {{usuario.username}}">
                     </div>
                     <div class="card-body">
