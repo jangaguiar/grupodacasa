@@ -191,7 +191,7 @@ body{
 /* CONTATOS */
 
  .bg_contato {
-    background-image: url("../static/fotos_perfil/louco2.png");
+    background-image: url("../static/fotos_perfil/louco.png");
     height: 100vh;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -200,8 +200,7 @@ body{
 
 }
 @media (max-width: 760px) {
-        .intro {
-          opacity: 0.3;
-          z-index: 0;
+        body.bg_contato{
+            background-image: url("../static/fotos_perfil/louco2.png");
         }
       }
