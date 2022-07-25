@@ -208,13 +208,13 @@ body{
     background-size: cover;
 } */
 
- .intro {
+ .bg_contato {
     background-image: url("../static/fotos_perfil/louco2.png");
     height: 100vh;
     background-position: bottom right;
     background-repeat: no-repeat;
     opacity: 0.95;
-    margin-top: -145px;
+    margin-top: -80px;
 
 }
 @media (max-width: 760px) {
