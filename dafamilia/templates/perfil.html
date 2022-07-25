@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-
 {% block head %}
     <title>Perfil</title>
 {% endblock %}
 {% block body %}
 <h1 class="page-h1">Perfil</h1>
 <div class="container">
-  <div class="card border border-info shadow mt-5 mx-auto" style="width: 18rem;">
+  <div class="card border border-info shadow my-5 mx-auto" style="width: 18rem;">
     <img src="{{ foto_perfil }}" class="card-img-top" alt="Foto do Usuário">
     <div class="card-body">
       <div class="row b-0">
@@ -15,7 +14,7 @@
               <address class="text-start">{{current_user.email}}</address>
           </div>
           <div class="col-6 text-end">
-              <a href="{{ url_for('editar_perfil') }}"><button type="button" class="btn btn-outline-info card-link">Editar</button></a>
+              <a href="{{ url_for('editar_perfil')+ '#editar_perfil' }}" ><button type="button"class="btn btn-outline-info card-link" >Editar</button></a>
           </div>
       </div>
     </div>
@@ -37,12 +36,13 @@
     </div>
     <div class="card-body card-courses text-center mt-2">
       <span class="text-muted">Cursos:</span>
-      <div class="cursos">
+      <div class="cursos" >
         {% for curso in current_user.cursos.split(';') %}
           <span class="bg-info mt-3 px-2 mx-1 text-gray text-light-dark rounded">{{ curso }}</span>
         {% endfor %}
       </div>
   </div>
+  <br id="editar_perfil">
 {% block form_editar_perfil %}
 {% endblock %}
 {% endblock %}

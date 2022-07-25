@@ -176,15 +176,7 @@ body{
     }
 }
 
-
-
-
-
-/* PERFIL */
-
-
 /* EDITAR PERFIL*/
-
 .editar-foto{
     width: 100%;
 }
@@ -197,15 +189,6 @@ body{
 
 
 /* CONTATOS */
-/* CONTATOS*/
-/* .bg-image{
-    background-image: url ('../static/fotos_perfil/louco.png');
-    /* min-height: 100vh;
-    background-attachment: fixed;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
  .bg_contato {
     background-image: url("../static/fotos_perfil/louco2.png");
