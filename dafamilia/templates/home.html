@@ -22,7 +22,7 @@
                     <div class="post-titulo d-flex justify-content-between">
                         <h3>{{ post.titulo }}</h3>
                         {% if post.autor.username == current_user.username %}
-                            <a  href="{{ url_for('exibir_post', post_id=post.id) }}"><button type="button" class="btn btn-outline-info">Editar</button></a>
+                            <a  href="{{ url_for('exibir_post', post_id=post.id)+ '#scrollspyform_editarpost' }}"><button type="button" class="btn btn-outline-info">Editar</button></a>
                         {% endif %}
                     </div>
                     <div class="post-corpo">

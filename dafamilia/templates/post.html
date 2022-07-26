@@ -34,7 +34,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form method="POST" action="" id="form_editarpost" class="border mx-0 mt-2">
+                <div id="edicao">
+                    {% if scroll %}
+                    <script>
+                        document.getElementById('{{ scroll }}').scrollIntoView();
+                        // or
+                        document.location.hash = '#' + '{{ scroll }}';
+                    </script>
+                    {% endif %}
+                    <form method="POST" action="" id="form_editarpost" class="border mx-0 mt-2">
                     {{ form.csrf_token }}
                     <legend>Editar Post</legend>
                     <fieldset>

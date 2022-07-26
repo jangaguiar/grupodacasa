@@ -168,7 +168,7 @@ def exibir_post(post_id):
             return redirect(url_for('home'))
     else:
         form = None
-    return render_template('post.html', post=post, form=form)
+    return render_template('post.html', post=post, form=form, scroll='edicao')
 
 
 @app.route('/post/<post_id>/excluir', methods=['GET', 'POST'])

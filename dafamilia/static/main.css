@@ -1,9 +1,11 @@
 
 /* GERAL PARA TODO O SITE */
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
+html, .root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
 body{
     background-color: #f2f2f2;
 }
@@ -164,7 +166,7 @@ body{
 .usuario{
     width: 290px;
     padding: 0;
-    margin: 2rem 2rem;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
