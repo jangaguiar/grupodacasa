@@ -21,7 +21,7 @@
                                 {% endfor %}
                             </div>
                             {% else %}
-                                {{ form.titulo(class="form-control") }}
+                                {{ form.titulo(class="form-control", wrap="on") }}
                             {% endif %}
                         </div>
                             <div class="form-group">
@@ -34,7 +34,7 @@
                                 {% endfor %}
                             </div>
                             {% else %}
-                                {{ form.corpo(class="form-control") }}
+                                {{ form.corpo(class="form-control", wrap="on") }}
                             {% endif %}
                         </div>
                     </fieldset>

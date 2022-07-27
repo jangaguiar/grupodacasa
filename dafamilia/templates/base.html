@@ -19,7 +19,7 @@
     <!-- JavaScript Bootstrap -->
     {{ bootstrap.load_js() }}
   </head>
-<body class="{% block class %}{% endblock %}">
+<body>
     {% include 'navbar.html' %}
     <div class="container mt-5">
         {% with mensagens = get_flashed_messages(with_categories=True) %}
